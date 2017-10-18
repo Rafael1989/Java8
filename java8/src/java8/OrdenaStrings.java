@@ -1,6 +1,7 @@
 package java8;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class OrdenaStrings {
@@ -9,7 +10,7 @@ public class OrdenaStrings {
 		palavras.add("c11");
 		palavras.add("a1111");
 		palavras.add("b");
-		palavras.sort((s1,s2)-> Integer.compare(s1.length(), s2.length()));
+		palavras.sort(Comparator.comparing(s -> s.length()));
 		palavras.forEach(s -> System.out.println(s));
 		new Thread(()->System.out.println("Executando um runnable")).start();
 	}

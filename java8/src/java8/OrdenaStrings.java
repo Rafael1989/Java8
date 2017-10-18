@@ -12,7 +12,7 @@ public class OrdenaStrings {
 		palavras.add("a1111");
 		palavras.add("b");
 		palavras.sort(comparing(String::length));
-		palavras.forEach(s -> System.out.println(s));
+		palavras.forEach(System.out::println);
 		new Thread(()->System.out.println("Executando um runnable")).start();
 	}
 }

@@ -9,9 +9,8 @@ public class OrdenaStrings {
 		palavras.add("c11");
 		palavras.add("a1111");
 		palavras.add("b");
-		Consumidor consumidor = new Consumidor();
-		Comparador comparador = new Comparador();
-		palavras.sort(comparador);
-		palavras.forEach(consumidor);
+		palavras.sort((s1,s2)-> Integer.compare(s1.length(), s2.length()));
+		palavras.forEach(s -> System.out.println(s));
+		new Thread(()->System.out.println("Executando um runnable")).start();
 	}
 }

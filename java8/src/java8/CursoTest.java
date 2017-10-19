@@ -16,6 +16,7 @@ public class CursoTest {
 		//cursos.stream().filter(c -> c.getAlunos() > 50).map(Curso::getNome).forEach(System.out::println);
 		cursos.stream().filter(c -> c.getAlunos() > 50).findFirst();
 		cursos.stream().mapToDouble(Curso::getAlunos).average();
+		List<Curso> collect = cursos.stream().collect(Collectors.toList());
 		
 //		cursos.forEach(c -> System.out.println(c.getAlunos()));
 	}
